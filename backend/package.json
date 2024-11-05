@@ -12,8 +12,11 @@
   "license": "ISC",
   "dependencies": {
     "@apollo/server": "^4.11.2",
+    "@neo4j/graphql": "^6.0.0",
+    "@neo4j/graphql-ogm": "^5.9.1",
     "express": "^4.21.1",
-    "graphql": "^16.9.0"
+    "graphql": "^16.9.0",
+    "neo4j-driver": "^5.26.0"
   },
   "devDependencies": {
     "@types/express": "^5.0.0",
