@@ -3,12 +3,16 @@ export const typeDefs = `#graphql
         title: String
         tagline: String
         released: Int
-        actors: [Person!]! @relationship(type: "ACTED_IN", direction: IN)
+        directed: [Person!]! @relationship(type: "DIRECTED", direction: IN)
+        cast: [Person!]! @relationship(type: "ACTED_IN", direction: IN)
     }
 
     type Person @node {
         name: String
         born: Int
-        movies: [Movie!]! @relationship(type: "ACTED_IN", direction: OUT)
+        acted: [Movie!]! @relationship(type: "ACTED_IN", direction: OUT)
+        directed: [Movie!]! @relationship(type: "DIRECTED", direction: OUT)
+        Produced: [Movie!]! @relationship(type: "PRODUCED", direction: OUT)
+        wrote: [Movie!]! @relationship(type: "WROTE", direction: OUT)
     }
 `;
